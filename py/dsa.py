@@ -1,31 +1,39 @@
-# stack implementation in python
+#queue implementation in Python
 
-# creating a stack
-def creating_stack():
-    stack = []
-    return stack
+class queue:
 
-# creating an empty stack
-def s_empty(stack):
-    return len(stack) == 0
+    #creating queue
+    def __init__(self):
+        self.queue = []
 
-# adding items into the stack
-def push(stack, item):
-    stack.append(item)
-    print("pushed item: " + item)
+    #add an element
+    def enqueue(self, item):
+        self.queue.append(item)
 
-# removing an element from the stack
-def pop(stack):
-    if (s_empty(stack)):
-        return "stack is empty"
+    #remove an element
+    def dequeue(self):
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop(0)
 
-    return stack.pop()
+    #print  the queue
+    def print(self):
+        print(self.queue)
 
-stack = creating_stack()
-push(stack, str(1))
-push(stack, str(4))
-push(stack, str(5))
-push(stack, str(6))
-push(stack, str(2))
-print("pop item: " + pop(stack))
-print("stack after poping an element: " + str(stack))
+    def size(self):
+        return len(self.queue)
+
+
+q = queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+q.enqueue(5)
+
+q.print()
+
+q.dequeue()
+
+print("After removing an element")
+q.print()
