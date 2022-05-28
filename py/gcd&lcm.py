@@ -14,6 +14,6 @@ def gcd(a, b):
 #drive code
 print('input a, b: ')
 a, b = (int (input()) for _ in range(2))
-lcm = a * b / gcd(a ,b)
+lcm = a * b // gcd(a ,b)
 print (gcd(a, b))
 print (lcm)
