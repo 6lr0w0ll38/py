@@ -57,4 +57,38 @@
 # print ('sum: ', list(reversed(sum_in_base(a, b, base))))
 
 ##mul
+def mul_in_base(a, b, base):
+    la, lb = len(a) - 1, len(b) - 1
+    r = []
+    a = list(reversed(a))
+    b = list(reversed(b))
+    while len(r) < la + lb + 2:
+        r += [0]
+    for _ in range(la + 1):
+        m = s = 0
+        for __ in range(lb + 1):
+            t = a[_] * b[__] + m
+            rt , m = t % base, t // base
+            t = r[_ + __] + rt + s
+            r[_ + __], s = t % base, t // base
+        r[lb + 1 + _] = m + s
+    return r
 
+def check(x, base):
+    if max(x) >= base:
+        print ('false, reinput: ')
+        x = list(map(int, input().split()))
+    else:
+        return x
+    return check(x, base)
+
+#drive code
+print ('base:')
+base = int(input())
+print ('a:')
+a = list(map(int, input().split()))
+a = check(a, base)
+print ('b:')
+b = list(map(int, input().split()))
+b = check(b, base)
+print ('mul: ', list(reversed(mul_in_base(a, b, base))))
