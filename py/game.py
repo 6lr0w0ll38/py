@@ -8,6 +8,7 @@ def check(x, b, e):
             return x
         return check(x, b, e)
 
+#driver code
 print ('b, e:')
 b, e = (int(input()) for _ in range(2))
 print ('input number [' , b, ',', e, ']')
@@ -31,6 +32,3 @@ while x != a:
     if flag == 5:
         print(a)
 print ('your win')
-
-
-

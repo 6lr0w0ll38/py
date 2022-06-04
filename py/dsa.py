@@ -23,7 +23,7 @@ class queue:
     def size(self):
         return len(self.queue)
 
-
+#driver code
 q = queue()
 q.enqueue(1)
 q.enqueue(2)
@@ -35,5 +35,5 @@ q.print()
 
 q.dequeue()
 
-print("After removing an element")
+print('After removing an element')
 q.print()

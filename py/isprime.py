@@ -13,7 +13,7 @@ def isprime(n):
     else:
         print('True')
 
-#drive code
+#driver code
 print ('n:')
 n = int(input())
 isprime(n)

@@ -13,7 +13,7 @@ def divisors(n):
             a.append(n // _)
     return a
 
-#drive code
+#driver code
 print ('n:')
 n = int(input())
 print (divisors(n))

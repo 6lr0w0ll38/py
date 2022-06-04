@@ -45,7 +45,7 @@
 #         return x
 #     return check(x, base)
 #
-# #drive code
+# #driver code
 # print ('base:')
 # base = int(input())
 # print ('a:')

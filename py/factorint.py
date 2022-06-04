@@ -16,7 +16,7 @@ def factorint(n):
         _ += 1
     return dict
 
-#drive code
+#driver code
 print ('n:')
 n = int(input())
 print (factorint(n))
